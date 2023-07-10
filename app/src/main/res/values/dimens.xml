@@ -25,4 +25,10 @@
     <dimen name="text_size_xxxlarge">56sp</dimen>
     <dimen name="app_bar_height">180dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="vod_custom_card_view_corner_radius">7.5dp</dimen>
+
+    <dimen name="selector_outline_stroke_width">1dp</dimen>
+
+    <dimen name="lb_action_icon_margin">12dp</dimen>
 </resources>

@@ -4,11 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.omapp.R
 import com.example.omapp.common.formatDuration
 import com.example.omapp.common.presentation.BaseFragment
 import com.example.omapp.common.presentation.ImagesLoader
 import com.example.omapp.databinding.FragmentGenereShowsListBinding
+import com.example.omapp.domain.model.GenereShows
 import com.example.omapp.domain.model.Movie
 import com.example.omapp.domain.model.Show
 import org.koin.android.ext.android.inject
@@ -22,6 +25,8 @@ class GenereShowsFragment  : BaseFragment() {
 
     private val imagesLoader: ImagesLoader by inject()
 
+    private lateinit var genereShowsAdapter: GenereShowsAdapter
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,12 +38,25 @@ class GenereShowsFragment  : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setUpUI()
         setViewModel()
+    }
+
+    private fun setUpUI() {
+        genereShowsAdapter = GenereShowsAdapter(onClickContent, imagesLoader)
+        binding?.listView?.apply {
+            layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+            adapter = genereShowsAdapter
+        }
+    }
+
+    private val onClickContent: (String) -> Unit = {
+
     }
 
     private fun setViewModel() {
         viewModel.viewState.observe(viewLifecycleOwner, ::updateUI)
-        viewModel.getGenereShows(rail)
+        viewModel.getGenereShows("rail")
     }
 
     private fun updateUI(viewState: GenereShowsListViewState) {
@@ -60,15 +78,8 @@ class GenereShowsFragment  : BaseFragment() {
     }
 
 
-    private fun showData(data: List<Show>) {
+    private fun showData(data: List<GenereShows>) {
         hideLoadingDialogFragment()
-        binding?.apply {
-            imagesLoader.loadImage(data.imagesURL.first(), header)
-            titleTv.text = data.name
-            yearTv.text = data.year.toString()
-            durationTv.text = context?.getString(R.string.duration, data.duration.formatDuration())
-            descriptionTv.text = data.description
-            setFavoriteButton(data.isFavorite)
-        }
+        genereShowsAdapter.submitList(data)
     }
 }
