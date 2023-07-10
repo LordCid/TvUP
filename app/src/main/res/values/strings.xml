@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">OMApp</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="movie_list_fragment_label">Movie List</string>
+    <string name="movie_detail_fragment_label">Movie Detail</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="error_label">Error: Cannot retrive data</string>
+
+    <!-- PlaceHolders -->
+    <string name="placeholder_loremipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</string>
+    <string name="placeholder_loremipsum_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus metus quis mi semper commodo. Suspendisse eleifend lacinia maximus. Integer luctus auctor diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris libero purus, sodales et tristique eu, laoreet in turpis. Nam dolor elit, ultrices non dolor ac, aliquet consequat risus. Phasellus aliquet, neque a dictum semper, sapien ligula congue dui, eu scelerisque felis dui sed sem. Mauris accumsan ac arcu eget vestibulum.
+
+Maecenas pellentesque aliquet dolor, a semper ante dapibus et. Etiam auctor tincidunt elit, sed facilisis elit egestas quis. Maecenas placerat sem non sapien maximus eleifend vel sed tortor. Suspendisse elementum enim mollis leo luctus, ac dictum lectus maximus. Cras ac lobortis urna, at pulvinar sem. Maecenas augue ipsum, viverra a laoreet ac, posuere vel dolor. In turpis justo, faucibus a egestas ac, faucibus nec nunc. Etiam ultrices pellentesque erat, quis consequat erat mattis vehicula. Phasellus ut molestie ipsum. Aliquam blandit sit amet urna id iaculis. Ut dignissim magna at efficitur malesuada. Ut quis ex quis massa luctus viverra. Quisque condimentum semper elit id porttitor. Praesent nec sem sed quam iaculis auctor sit amet vitae velit.
+
+Quisque ut pellentesque nibh. Nam dictum rhoncus tristique. Sed scelerisque diam et arcu aliquet dapibus. Integer eu ipsum eget velit pharetra hendrerit. Fusce mi odio, placerat sed dolor eget, iaculis laoreet quam. Pellentesque vehicula, ex in faucibus auctor, nisi orci pellentesque justo, quis elementum ligula nibh at ligula. Praesent hendrerit faucibus metus eget scelerisque. Curabitur pharetra mi tristique velit molestie, vitae tempus orci iaculis. Aliquam tristique cursus ligula quis aliquam. Aliquam interdum enim turpis, quis mollis urna tincidunt quis. Donec eros quam, molestie sit amet fringilla in, condimentum non ligula. Nullam in velit sit amet turpis rutrum ornare at nec massa. Etiam porttitor imperdiet lacus, quis semper lacus porttitor et. Nunc fermentum congue sapien, at malesuada mauris mattis nec. Ut viverra varius massa, posuere egestas risus maximus in.
+
+Sed enim dolor, pretium quis sem eget, dapibus laoreet enim. Vivamus et nibh non mi venenatis hendrerit. In porta velit sit amet efficitur blandit. Donec non porta eros. Sed blandit placerat ante, eu consectetur nunc ornare sit amet. Mauris nec quam ut tellus varius sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed ac tincidunt mauris. Maecenas ac leo molestie, scelerisque metus in, mollis felis. Donec venenatis dui sit amet volutpat tincidunt. Nulla facilisi. Etiam suscipit ex non leo aliquet tempor. Pellentesque maximus aliquet laoreet. Pellentesque augue lectus, blandit id feugiat quis, ultrices id erat.
+    </string>
+    <string name="placeholder_title">Title</string>
+    <string name="placeholder_year">2010</string>
+    <string name="placeholder_duration">10 minutos</string>
+    <string name="downloading_title_dialog">Donwloading movies...</string>
+    <string name="duration">Duration: %s</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="error_message">Error: %s</string>
+</resources>

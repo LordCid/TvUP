@@ -1,0 +1,10 @@
+Librerias
+Test -> Mockk
+Dependency Injection -> Koin
+JetPack -> NavComponent, ViewBinding, Paging3
+ImageLoader -> Glide
+Async -> Kotlin Coroutines
+Local Data Base -> Room
+Network service -> Retrofit
+
+Tiempo desarrollo = 4 días aprox
