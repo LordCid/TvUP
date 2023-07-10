@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/MovieListFragment">
+    app:startDestination="@id/GenereShowsFragment">
 
     <fragment
-        android:id="@+id/MovieListFragment"
+        android:id="@+id/GenereShowsFragment"
         android:name="com.example.omapp.presentation.list.MovieListFragment"
         android:label="@string/movie_list_fragment_label"
         tools:layout="@layout/fragment_movie_list">
@@ -15,19 +15,19 @@
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/MovieDetailFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/MovieDetailFragment"
-        android:name="com.example.omapp.presentation.detail.MovieDetailFragment"
-        android:label="@string/movie_detail_fragment_label"
-        tools:layout="@layout/fragment_movie_detail">
+<!--    <fragment-->
+<!--        android:id="@+id/MovieDetailFragment"-->
+<!--        android:name="com.example.omapp.presentation.detail.MovieDetailFragment"-->
+<!--        android:label="@string/movie_detail_fragment_label"-->
+<!--        tools:layout="@layout/fragment_movie_detail">-->
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/MovieListFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_SecondFragment_to_FirstFragment"-->
+<!--            app:destination="@id/MovieListFragment" />-->
 
-        <argument
-            android:name="id"
-            android:defaultValue=""
-            app:argType="string" />
-    </fragment>
+<!--        <argument-->
+<!--            android:name="id"-->
+<!--            android:defaultValue=""-->
+<!--            app:argType="string" />-->
+<!--    </fragment>-->
 </navigation>
