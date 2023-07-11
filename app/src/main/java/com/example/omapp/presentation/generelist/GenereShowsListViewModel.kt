@@ -5,11 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.omapp.ERROR_GENERIC_MESSAGE
-import com.example.omapp.common.DataResponse
 import com.example.omapp.domain.GetGenereShowsUseCase
 import com.example.omapp.domain.model.GenereShows
-import com.example.omapp.domain.model.Movie
-import com.example.omapp.presentation.detail.MovieDetailViewState
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch
 

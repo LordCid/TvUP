@@ -6,14 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.omapp.R
-import com.example.omapp.common.formatDuration
 import com.example.omapp.common.presentation.BaseFragment
 import com.example.omapp.common.presentation.ImagesLoader
 import com.example.omapp.databinding.FragmentGenereShowsListBinding
 import com.example.omapp.domain.model.GenereShows
-import com.example.omapp.domain.model.Movie
-import com.example.omapp.domain.model.Show
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

@@ -3,6 +3,10 @@ package com.example.omapp.data.network.mapper
 import com.example.omapp.common.Mapper
 import com.example.omapp.data.network.model.GenereShowsDTO
 import com.example.omapp.domain.model.GenereShows
+import com.example.omapp.genereShows
+import com.example.omapp.genereShowsDTO
+import com.example.omapp.otherGenereShows
+import com.example.omapp.otherGenereShowsDTO
 import org.junit.Assert.*
 
 import org.junit.Before
@@ -19,18 +23,8 @@ class MapperGenereShowsTest {
 
     @Test
     fun `Given DTO List when invoked, then return domain list`() {
-        val expected = listOf(
-            GenereShows(
-                id = "ab12",
-                shows = emptyList()
-            )
-        )
-        val input = listOf(
-                GenereShowsDTO(
-                id = "ab12",
-                shows = emptyList()
-            )
-        )
+        val expected = listOf(genereShows)
+        val input = listOf(genereShowsDTO)
 
         val actual = sut.map(input)
 
@@ -40,18 +34,8 @@ class MapperGenereShowsTest {
 
     @Test
     fun `Given OTHER DTO List when invoked, then return domain list`() {
-        val expected = listOf(
-                GenereShows(
-                    id = "cd45",
-                    shows = emptyList()
-                )
-        )
-        val input =  listOf(
-            GenereShowsDTO(
-                id = "cd45",
-                shows = emptyList()
-            )
-        )
+        val expected = listOf(otherGenereShows)
+        val input =  listOf(otherGenereShowsDTO)
 
         val actual = sut.map(input)
 

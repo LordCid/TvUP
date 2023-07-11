@@ -2,8 +2,6 @@ package com.example.omapp.data
 
 import com.example.omapp.common.DataResponse
 import com.example.omapp.common.ErrorResponse
-import com.example.omapp.data.local.LocalDataSource
-import com.example.omapp.data.network.NetworkDataSource
 import com.example.omapp.data.network.NetworkDataSourceGenereShows
 import com.example.omapp.domain.Repository
 import com.example.omapp.genereShows
@@ -19,13 +17,11 @@ import org.junit.Test
 class RepositoryGetGenereShowsImplTest {
 
     private lateinit var sut: Repository
-    private val networkDataSource = mockk<NetworkDataSource>(relaxed = true)
     private val networkDataSourceGenereShows = mockk<NetworkDataSourceGenereShows>(relaxed = true)
-    private val localDataSource = mockk<LocalDataSource>(relaxed = true)
 
     @Before
     fun setUp() {
-        sut = RepositoryImpl(networkDataSource, networkDataSourceGenereShows, localDataSource)
+        sut = RepositoryImpl(networkDataSourceGenereShows)
     }
 
     @Test

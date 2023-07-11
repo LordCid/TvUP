@@ -1,5 +1,6 @@
 package com.example.omapp.data.network.mapper
 
+import com.example.omapp.IMAGES_BASE_PATH
 import com.example.omapp.common.Mapper
 import com.example.omapp.data.network.model.GenereShowsDTO
 import com.example.omapp.data.network.model.MovieImagesDTO
@@ -32,9 +33,9 @@ class MapperGenereShows : Mapper<List<GenereShows>, List<GenereShowsDTO>> {
     }
 
     private fun mapMovieImage(movieImageDTO: MovieImagesDTO) = MovieImages(
-        photo = movieImageDTO.photo,
-        poster = movieImageDTO.poster,
-        background = movieImageDTO.background,
+        photo = "$IMAGES_BASE_PATH${movieImageDTO.photo}",
+        poster = "$IMAGES_BASE_PATH${movieImageDTO.poster}",
+        background = "$IMAGES_BASE_PATH${movieImageDTO.background}",
     )
 
 }

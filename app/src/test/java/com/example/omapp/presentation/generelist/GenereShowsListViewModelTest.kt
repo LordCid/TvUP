@@ -2,12 +2,9 @@ package com.example.omapp.presentation.generelist
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
-import com.example.omapp.common.DataResponse
 import com.example.omapp.common.ErrorResponse
 import com.example.omapp.domain.GetGenereShowsUseCase
 import com.example.omapp.genereShows
-import com.example.omapp.movie
-import com.example.omapp.presentation.detail.MovieDetailViewState
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
@@ -21,7 +18,6 @@ import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.setMain
 import org.junit.After
-import org.junit.Assert
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

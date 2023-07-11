@@ -6,7 +6,6 @@ import com.example.omapp.common.ErrorResponse
 import com.example.omapp.common.Mapper
 import com.example.omapp.data.network.model.GenereShowsDTO
 import com.example.omapp.domain.model.GenereShows
-import com.example.omapp.domain.model.Movie
 import retrofit2.awaitResponse
 
 class NetworkDataSourceGenereShowsImpl(

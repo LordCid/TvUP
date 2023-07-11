@@ -25,8 +25,6 @@ class App : Application() {
                 mapperModule,
                 dataModule,
                 domainModule,
-                movieListModule,
-                movieDetailModule,
                 genereShowsModule
             )
         }
