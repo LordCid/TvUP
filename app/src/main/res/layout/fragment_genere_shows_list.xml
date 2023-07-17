@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.list.MovieListFragment">
+    tools:context=".presentation.generelist.GenereShowsFragment">
 
     <TextView
         android:id="@+id/error_view"
@@ -28,5 +28,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:itemCount="5"
-            tools:listitem="@layout/item_movie" />
+            tools:listitem="@layout/item_rail" />
 </androidx.constraintlayout.widget.ConstraintLayout>
