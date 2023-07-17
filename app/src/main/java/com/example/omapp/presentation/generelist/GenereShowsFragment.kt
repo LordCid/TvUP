@@ -13,6 +13,7 @@ import com.example.omapp.domain.model.GenereShows
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+const val SELECTED_RAIL_ID = "5efb4af4f0e17b0075ced97b"
 class GenereShowsFragment  : BaseFragment() {
 
     private var binding: FragmentGenereShowsListBinding? = null
@@ -52,7 +53,7 @@ class GenereShowsFragment  : BaseFragment() {
 
     private fun setViewModel() {
         viewModel.viewState.observe(viewLifecycleOwner, ::updateUI)
-        viewModel.getGenereShows("rail")
+        viewModel.getGenereShows(SELECTED_RAIL_ID)
     }
 
     private fun updateUI(viewState: GenereShowsListViewState) {

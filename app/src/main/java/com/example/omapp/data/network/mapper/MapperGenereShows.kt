@@ -17,25 +17,25 @@ class MapperGenereShows : Mapper<List<GenereShows>, List<GenereShowsDTO>> {
     override fun map(input: List<GenereShowsDTO>): List<GenereShows> {
        return input.map {
            GenereShows(
-               id = it.id,
-               shows = it.shows.map { showDTO ->
+               id = it.id ?:"",
+               shows = it.shows?.map { showDTO ->
                    Show(
-                       id = showDTO.id,
-                       title = showDTO.title,
+                       id = showDTO.id ?:"",
+                       title = showDTO.title ?:"",
                        movieImages = mapMovieImage(showDTO.movieImages),
-                       actors = showDTO.actors,
-                       synopsis = showDTO.synopsis,
-                       synopsisEpisode = showDTO.synopsisEpisode
+                       actors = showDTO.actors ?: emptyList(),
+                       synopsis = showDTO.synopsis ?:"",
+                       synopsisEpisode = showDTO.synopsisEpisode ?:""
                    )
-               }
+               } ?: emptyList()
            )
        }
     }
 
-    private fun mapMovieImage(movieImageDTO: MovieImagesDTO) = MovieImages(
-        photo = "$IMAGES_BASE_PATH${movieImageDTO.photo}",
-        poster = "$IMAGES_BASE_PATH${movieImageDTO.poster}",
-        background = "$IMAGES_BASE_PATH${movieImageDTO.background}",
+    private fun mapMovieImage(movieImageDTO: MovieImagesDTO?) = MovieImages(
+        photo = movieImageDTO?.photo.let {"$it"},
+        poster =  movieImageDTO?.poster.let {"$it"},
+        background =  movieImageDTO?.background.let {"$it"},
     )
 
 }

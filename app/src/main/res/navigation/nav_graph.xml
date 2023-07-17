@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/GenereShowsFragment"
-        android:name="com.example.omapp.presentation.list.MovieListFragment"
+        android:name="com.example.omapp.presentation.generelist.GenereShowsFragment"
         android:label="@string/movie_list_fragment_label"
-        tools:layout="@layout/fragment_movie_list">
+        tools:layout="@layout/fragment_genere_shows_list">
 
 <!--        <action-->
 <!--            android:id="@+id/action_FirstFragment_to_SecondFragment"-->
