@@ -10,6 +10,7 @@
     <dimen name="image_space">200dp</dimen>
 
     <dimen name="spacing_sl">12dp</dimen>
+    <dimen name="spacing_item">8dp</dimen>
 
     <!-- Margins & Padding, 8 dp baseline, https://material.io/guidelines/layout/metrics-keylines.html#metrics-keylines-baseline-grids -->
     <dimen name="margin_padding_size_small">8dp</dimen>

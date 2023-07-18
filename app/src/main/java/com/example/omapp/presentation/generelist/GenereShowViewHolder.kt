@@ -23,8 +23,8 @@ class GenereShowViewHolder(
             title.text = genereShows.title
             val divider = HorizontalDividerItemDecoration(
                 root.resources.getDimension(R.dimen.spacing_sl).toInt(),
-                0,
-                0
+                root.resources.getDimension(R.dimen.spacing_item).toInt(),
+                root.resources.getDimension(R.dimen.spacing_sl).toInt()
             )
             horizontalListView.apply {
                 this.adapter = showsAdapter
