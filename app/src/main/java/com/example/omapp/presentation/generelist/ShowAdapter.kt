@@ -48,7 +48,8 @@ private val imagesLoader: ImagesLoader
         fun bind(show: Show) {
             with(binding) {
                 root.setOnClickListener { onClick(show.id) }
-                imagesLoader.loadImage(show.movieImages.poster, mainImage)
+                titleTv.text = show.title
+                imagesLoader.loadImage(show.movieImages.poster, cardContainer)
             }
         }
     }

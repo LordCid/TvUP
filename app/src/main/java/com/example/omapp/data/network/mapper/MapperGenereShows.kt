@@ -33,9 +33,9 @@ class MapperGenereShows : Mapper<List<GenereShows>, List<GenereShowsDTO>> {
     }
 
     private fun mapMovieImage(movieImageDTO: MovieImagesDTO?) = MovieImages(
-        photo = movieImageDTO?.photo.let {"$it"},
-        poster =  movieImageDTO?.poster.let {"$it"},
-        background =  movieImageDTO?.background.let {"$it"},
+        photo = movieImageDTO?.photo.let {"$IMAGES_BASE_PATH$it"},
+        poster =  movieImageDTO?.poster.let {"$IMAGES_BASE_PATH$it"},
+        background =  movieImageDTO?.background.let {"$IMAGES_BASE_PATH$it"},
     )
 
 }

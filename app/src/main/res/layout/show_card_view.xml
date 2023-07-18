@@ -3,9 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/vod_card"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:clickable="true"
     android:clipChildren="true"
     android:clipToPadding="true"
@@ -15,19 +14,23 @@
     app:cardCornerRadius="@dimen/vod_custom_card_view_corner_radius">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:duplicateParentState="true">
+        android:id="@+id/card_container"
+        android:layout_width="@dimen/image_list_size"
+        android:layout_height="@dimen/image_space"
+        android:background="@drawable/img_placeholder">
 
-        <ImageView
-            android:id="@+id/main_image"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:adjustViewBounds="true"
-            android:background="@drawable/overlay_black"
-            android:scaleType="centerInside"
-            tools:src="@drawable/img_placeholder" />
-
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/AppTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_padding_size_small"
+            android:textSize="@dimen/text_size_large"
+            android:layout_marginBottom="@dimen/margin_padding_size_xxlarge"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:text="@string/placeholder_title"/>
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"

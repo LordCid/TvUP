@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OMApp</string>
+    <string name="app_name">TVUP</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="movie_list_fragment_label">Movie List</string>

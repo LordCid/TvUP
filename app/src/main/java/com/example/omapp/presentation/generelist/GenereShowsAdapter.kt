@@ -10,19 +10,20 @@ import com.example.omapp.databinding.ItemGenereShowsBinding
 import com.example.omapp.databinding.ItemRailBinding
 import com.example.omapp.domain.model.GenereShows
 import com.example.omapp.domain.model.Show
+import com.example.omapp.presentation.model.GenereShowsUI
 
 class GenereShowsAdapter(
     private val onClick: (String) -> Unit,
     private val imagesLoader: ImagesLoader
-): ListAdapter<GenereShows, GenereShowViewHolder>(TaskDiffCallBack()) {
+): ListAdapter<GenereShowsUI, GenereShowViewHolder>(TaskDiffCallBack()) {
 
-    class TaskDiffCallBack : DiffUtil.ItemCallback<GenereShows>() {
+    class TaskDiffCallBack : DiffUtil.ItemCallback<GenereShowsUI>() {
 
-        override fun areItemsTheSame(oldItem: GenereShows, newItem: GenereShows): Boolean {
-            return oldItem.id == newItem.id
+        override fun areItemsTheSame(oldItem: GenereShowsUI, newItem: GenereShowsUI): Boolean {
+            return oldItem.title == newItem.title
         }
 
-        override fun areContentsTheSame(oldItem: GenereShows, newItem: GenereShows): Boolean {
+        override fun areContentsTheSame(oldItem: GenereShowsUI, newItem: GenereShowsUI): Boolean {
             return oldItem == newItem
         }
     }

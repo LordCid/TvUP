@@ -10,6 +10,7 @@ import com.example.omapp.common.presentation.BaseFragment
 import com.example.omapp.common.presentation.ImagesLoader
 import com.example.omapp.databinding.FragmentGenereShowsListBinding
 import com.example.omapp.domain.model.GenereShows
+import com.example.omapp.presentation.model.GenereShowsUI
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -75,7 +76,7 @@ class GenereShowsFragment  : BaseFragment() {
     }
 
 
-    private fun showData(data: List<GenereShows>) {
+    private fun showData(data: List<GenereShowsUI>) {
         hideLoadingDialogFragment()
         genereShowsAdapter.submitList(data)
     }

@@ -5,7 +5,7 @@ const val BASE_URL = "https://mediasync.tvup.cloud/media/carrier/"
 const val RAIL_ID = "railId"
 const val GET_GENERES_SHOWS = "{$RAIL_ID}/last7d.cine.json "
 
-const val IMAGES_BASE_PATH = "https://mediasync.tvup.cloud/"
+const val IMAGES_BASE_PATH = "https://mediasync.tvup.cloud"
 
 
 
